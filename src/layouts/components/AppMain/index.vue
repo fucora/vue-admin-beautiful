@@ -55,6 +55,7 @@ export default {
         }*/
         if ("mobile" === this.device) {
           this.$store.dispatch("settings/foldSideBar");
+          $("body").attr("style", "");
         }
       });
     },

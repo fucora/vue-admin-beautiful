@@ -97,6 +97,7 @@ export default {
   methods: {
     handleClickOutside() {
       this.$store.dispatch("settings/foldSideBar");
+      $("body").attr("style", "");
     },
   },
 };
@@ -251,6 +252,7 @@ export default {
         .byui-main {
           width: 100%;
           margin-left: 0;
+
           .app-main-container {
             margin: 5px !important;
             width: calc(100% - 10px) !important;

@@ -67,11 +67,15 @@ export default {
       "loginTimes",
       "lastLoginTime",
       "selectedTag",
+      "device",
     ]),
   },
   methods: {
     handleCollapse() {
       this.$store.dispatch("settings/changeCollapse");
+      if ("mobile" == this.device && false === this.collapse) {
+        $("body").attr("style", "overflow:hidden");
+      }
     },
     async logout() {
       await this.$baseConfirm(
