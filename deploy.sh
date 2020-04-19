@@ -16,7 +16,6 @@ git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-beautiful.gi
 cd -
 cd -
 rimraf dist
-rimraf vue-admin-beautiful.zip
 exec /bin/bash
 
 
