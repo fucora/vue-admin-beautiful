@@ -19,6 +19,8 @@
 
 ## 鸣谢 HBuilderX,prettier,Vue
 
+## star 如果您觉得帮助到了您，麻烦去 github 给个 sttar [感谢有你](https://github.com/chuzhixin/vue-admin-beautiful)
+
 ## 安装
 
 ```bash

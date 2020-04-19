@@ -82,12 +82,7 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/codeGenerator/index"),
         meta: { title: "代码生成机" },
       },
-      {
-        path: "news",
-        name: "News",
-        component: () => import("@/views/byui/news/index"),
-        meta: { title: "新闻" },
-      },
+
       /*{
         path: "markdown",
         name: "Markdown",
@@ -226,6 +221,12 @@ export const asyncRoutes = [
         name: "More",
         component: () => import("@/views/byui/more/index"),
         meta: { title: "更多组件" },
+      },
+      {
+        path: "news",
+        name: "News",
+        component: () => import("@/views/byui/news/index"),
+        meta: { title: "新闻（可能存在跨域）" },
       },
     ],
   },
