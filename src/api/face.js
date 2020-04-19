@@ -2,7 +2,7 @@ import request from "@/utils/request";
 
 export function getList(data) {
   return request({
-    url: "/face/list", //Byui代码生成机生成的url,请修改为正确的url
+    url: "/face/list",
     method: "post",
     data,
   });
@@ -10,7 +10,7 @@ export function getList(data) {
 
 export function doEdit(data) {
   return request({
-    url: "/face/edit", //Byui代码生成机生成url的,请修改为正确的url
+    url: "/face/edit",
     method: "post",
     data,
   });
@@ -18,7 +18,7 @@ export function doEdit(data) {
 
 export function doDelete(data) {
   return request({
-    url: "/face/delete", //Byui代码生成机生成url的,请修改为正确的url
+    url: "/face/delete",
     method: "post",
     data,
   });
