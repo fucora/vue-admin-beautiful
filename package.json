@@ -4,7 +4,7 @@
   "private": true,
   "author": "chuzhixin <1204505056@qq.com>",
   "participants": [],
-  "homepage": "https://chu1204505056.gitee.io/byui-bookmarks/",
+  "homepage": "https://chu1204505056.gitee.io/vue-admin-beautiful",
   "scripts": {
     "serve": "vue-cli-service serve",
     "preview": "node build/index.js --preview --report",
