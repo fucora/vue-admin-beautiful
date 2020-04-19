@@ -163,22 +163,20 @@
                 >国内源码下载通道（记得给个好评）
               </el-button>
             </a>
-
             <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                让您破费了，谢谢您愿意支持开源
+              </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
-              <a
-                slot="reference"
-                target="_blank"
-                href="//shang.qq.com/wpa/qunwpa?idkey=00db5d4f8037fb577d128c2654de0bef68d32e55a41431b07a08a1d4446bb587"
-              >
+              <a slot="reference" target="_blank">
                 <el-button type="warning">官方讨论群 972435319</el-button>
               </a>
             </el-popover>
             <el-popover placement="top" width="250" trigger="hover">
-              <el-image :src="require('@/assets/wx_ewm.png')"></el-image>
               <p>
                 添加好友时请附带，付款人名称信息，我一定努力让你觉得物超所值，当然一切都是在你自愿的基础上
               </p>
+              <el-image :src="require('@/assets/wx_ewm.png')"></el-image>
               <p>QQ:1204505056</p>
               <p>微信:chu1204505056</p>
               <a slot="reference" target="_blank">
