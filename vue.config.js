@@ -4,7 +4,7 @@ const { title, abbreviation, devPort } = require("./src/settings");
 const pkg = require("./package.json");
 const webpack = require("webpack");
 const CompressionWebpackPlugin = require("compression-webpack-plugin");
-const productionGzipExtensions = [
+/*const productionGzipExtensions = [
   "js",
   "css",
   "sass",
@@ -15,7 +15,7 @@ const productionGzipExtensions = [
   "ico",
   "bmp",
   "vue",
-];
+];*/
 const WebpackBar = require("webpackbar");
 const FileManagerPlugin = require("filemanager-webpack-plugin");
 
@@ -153,7 +153,7 @@ module.exports = {
         .loader("image-webpack-loader")
         .options({ bypassOnDebug: true })
         .end();
-      config
+      /* config
         .plugin("compression")
         .use(CompressionWebpackPlugin, [
           {
@@ -166,7 +166,7 @@ module.exports = {
             minRatio: 0.8,
           },
         ])
-        .end();
+        .end();*/
       config
         .plugin("banner")
         .use(webpack.BannerPlugin, [
