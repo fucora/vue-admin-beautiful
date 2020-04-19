@@ -117,15 +117,11 @@ module.exports = {
     });
     config.when(process.env.NODE_ENV !== "development", (config) => {
       config.performance.set("hints", false);
-      config.devtool("cheap-module-source-map");
+      config.devtool("none");
       config
         .plugin("ScriptExtHtmlWebpackPlugin")
         .after("html")
-        .use("script-ext-html-webpack-plugin", [
-          {
-            inline: /runtime\..*\.js$/,
-          },
-        ])
+        .use("script-ext-html-webpack-plugin", [{ inline: /runtime\..*\.js$/ }])
         .end();
       config.optimization.splitChunks({
         chunks: "all",
@@ -177,6 +173,8 @@ module.exports = {
           `\u0062\u0079\u0075\u0069\u524d\u7aef\u654f\u6377\u5f00\u53d1\u5e73\u53f0 : ${pkg.name}\n copyright:\u0031\u0032\u0030\u0034\u0035\u0030\u0035\u0030\u0035\u0036\u0040\u0071\u0071\u002e\u0063\u006f\u006d \n author: ${pkg.author} \n participants: ${pkg.participants}\n time: ${time}`,
         ])
         .end();
+    });
+    config.when(process.env.NODE_ENV === "production", (config) => {
       config
         .plugin("fileManager")
         .use(FileManagerPlugin, [
