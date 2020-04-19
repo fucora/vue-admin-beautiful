@@ -9,12 +9,8 @@ git commit -m 'deploy'
 git push -f "https://${access_token}@gitee.com/chu1204505056/vue-admin-beautiful.git" master:gh-pages
 start "https://gitee.com/chu1204505056/vue-admin-beautiful/pages"
 cd -
-git init
-git add -A
-git commit -m 'deploy'
-git push -f "https://${access_token}@github.com/chuzhixin/vue-admin-beautiful.git" master
-start "https://github.com/chuzhixin/vue-admin-beautiful"
 cd -
+rimraf dist
 exec /bin/bash
 
 

@@ -19,7 +19,8 @@
     "clear": "rimraf node_modules&&cnpm i",
     "update": "nrm use taobao&&ncu -u",
     "svgo": "svgo -f src/icons/svg --config=svgo.yml",
-    "push": "start ./deploy.sh"
+    "push": "start ./push.sh",
+    "deploy": "start ./deploy.sh"
   },
   "husky": {
     "hooks": {
