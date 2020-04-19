@@ -90,8 +90,8 @@ module.exports = {
     };
   },
   chainWebpack(config) {
-    config.plugins.delete("preload");
-    config.plugins.delete("prefetch");
+    /*config.plugins.delete("preload");
+    config.plugins.delete("prefetch");*/
     config.resolve.symlinks(true);
     config.module.rule("svg").exclude.add(resolve("src/icons")).end();
     config.module
