@@ -41,7 +41,7 @@ function mockServer() {
   }
 }
 
-const name = title || "vue-element-admin-beautiful";
+const name = title || "vue-admin-beautiful";
 
 module.exports = {
   publicPath: "",
