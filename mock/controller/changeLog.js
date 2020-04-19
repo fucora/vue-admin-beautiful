@@ -41,6 +41,10 @@ const data = [
       "删除babel-polyfill 提高打包速度 减少压缩体积（放弃ie是这个项目做出的最伟大的决定）",
     timestamp: "2018-04-18",
   },
+  {
+    content: "源码精简至800k",
+    timestamp: "2018-04-19",
+  },
 ];
 
 export default [
