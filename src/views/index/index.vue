@@ -165,7 +165,7 @@
             </a>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                让您破费了，谢谢您愿意支持开源
+                谢谢您愿意支持开源
               </p>
               <el-image :src="require('@/assets/ewm.png')"></el-image>
               <a slot="reference" target="_blank">
