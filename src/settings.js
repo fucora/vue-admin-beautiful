@@ -10,7 +10,7 @@ module.exports = {
   tokenTableName: "BYUI-VUE-TABLE", //token表名
   storage: "localStorage", //token存储位置
   logo: true, //是否显示logo
-  header: "noFixed", //固定fixed 不固定noFixed
+  header: "fixed", //固定fixed 不固定noFixed
   layout: "vertical", //横纵布局 horizontal vertical
   themeBar: true, //是否开启主题配置按钮
   tagsView: true, //是否显示多标签页
