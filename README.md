@@ -4,22 +4,21 @@
 - Element
 - Vue-admin-beautiful
 
-<p align="center">
-  <a href="https://github.com/vuejs/vue">
-    <img src="https://img.shields.io/badge/vue-始终基于最新版-brightgreen.svg" alt="vue">
-  </a>
-  <a href="https://github.com/ElemeFE/element">
-    <img src="https://img.shields.io/badge/element--ui-始终基于最新版-brightgreen.svg" alt="element-ui">
-  </a>
+<p align="left">
+    <img src="https://img.shields.io/badge/vue-始终基于最新版-brightgreen.svg">
+    <img src="https://img.shields.io/badge/vuex-始终基于最新版-brightgreen.svg" >
+    <img src="https://img.shields.io/badge/vue--router-始终基于最新版-brightgreen.svg">
+    <img src="https://img.shields.io/badge/@vue/cli-始终基于最新版-brightgreen.svg">
+    <img src="https://img.shields.io/badge/axios-始终基于最新版-brightgreen.svg">
 </p>
-
-## 致歉
-
-最近演示网站总被不知名人士攻击恶意劫持到其他色情网站，在此向大家致歉，烦请攻击的大哥放过。。。
 
 ## 简介
 
 演示地址:[vue-admin-beautiful](http://chu1204505056.gitee.io/vue-admin-beautiful)
+
+## 致歉
+
+最近演示网站总被不知名人士攻击恶意劫持到其他色情网站，在此向大家致歉，烦请攻击的大哥放过。。。
 
 ## 梦想
 
