@@ -1,5 +1,11 @@
 <template>
   <div class="login-container">
+    <el-alert
+      title="致攻击我网站的人：攻击我的演示网站一定让您很有成就感吧，谢谢你让我更认真的去拥抱技术。。。"
+      type="success"
+      :closable="false"
+    >
+    </el-alert>
     <div class="login-logo-bysj"></div>
     <el-row>
       <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
