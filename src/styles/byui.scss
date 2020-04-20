@@ -5,6 +5,24 @@
 @import "./loading.scss";
 
 $base: ".byui";
+@mixin scrollbar {
+  overflow-y: scroll;
+  max-height: 98vh;
+  margin-bottom: 0.5vh;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(144, 147, 153, 0.3);
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(144, 147, 153, 0.3);
+  }
+}
+
 html {
   body {
     -webkit-font-smoothing: antialiased;
@@ -241,13 +259,11 @@ html {
 
     /*菜单开始*/
     .el-menu.el-menu--popup.el-menu--popup-right-start {
-      max-height: 90vh;
-      overflow-y: scroll;
+      @include scrollbar;
     }
 
     .el-menu.el-menu--popup.el-menu--popup-bottom-start {
-      max-height: 80vh;
-      overflow-y: scroll;
+      @include scrollbar;
     }
 
     .el-menu--vertical {
@@ -292,6 +308,7 @@ html {
     .el-message-box {
       &__body {
         border-top: 1px solid $base-border-color;
+
         .el-form {
           padding-right: 30px;
         }

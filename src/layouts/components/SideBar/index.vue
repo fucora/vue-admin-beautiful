@@ -82,6 +82,9 @@ export default {
   z-index: 99;
 
   ::v-deep {
+    .el-scrollbar__wrap {
+      overflow-x: hidden;
+    }
     .el-menu {
       border: 0;
     }
