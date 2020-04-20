@@ -12,6 +12,5 @@ tests/**/coverage/
 *.ntvs*
 *.njsproj
 *.sln
-/public/video/
+public/video/
 vue-admin-beautiful.zip
-/vue-admin-beautiful.zip
