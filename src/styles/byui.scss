@@ -6,7 +6,7 @@
 
 $base: ".byui";
 @mixin scrollbar {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 98vh;
   margin-bottom: 0.5vh;
   &::-webkit-scrollbar {
