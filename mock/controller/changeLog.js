@@ -45,6 +45,10 @@ const data = [
     content: "源码精简至800k",
     timestamp: "2020-04-19",
   },
+  {
+    content: "添加视频播放器组件",
+    timestamp: "2020-04-20",
+  },
 ];
 
 export default [

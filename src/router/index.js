@@ -174,12 +174,12 @@ export const asyncRoutes = [
         component: () => import("@/views/byui/loading/index"),
         meta: { title: "loading" },
       },
-      /*{
+      {
         path: "player",
         name: "Player",
         component: () => import("@/views/byui/player/index"),
         meta: { title: "视频播放器", noCache: true },
-      },*/
+      },
       {
         path: "editor",
         name: "Editor",

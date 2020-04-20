@@ -180,7 +180,7 @@
               <p>QQ:1204505056</p>
               <p>微信:chu1204505056</p>
               <a slot="reference" target="_blank">
-                <el-button type="warning">一对一问题解答（量力而行）</el-button>
+                <el-button type="warning">解锁全部功能</el-button>
               </a>
             </el-popover>
           </div>

@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import { getPrettierList } from "@/api/markdown";
 import marked from "marked";
 import "github-markdown-css/github-markdown.css";
+import md from "./js/markdown";
 
 export default {
-  name: "News",
+  name: "Markdown",
   data() {
     return {
       listLoading: true,
@@ -47,28 +47,24 @@ export default {
       this.listLoading = true;
       switch (this.value) {
         case "0":
-          getPrettierList(this.pagination)
-            .then((res) => {
-              this.prettierList = marked(res.data || "", {
-                renderer: new marked.Renderer(),
-                gfm: true,
-                tables: true,
-                breaks: false,
-                pedantic: false,
-                sanitize: false,
-                smartLists: true,
-                smartypants: false,
-              });
-            })
-            .then(() => {
-              $(".markdown-container a").each(function () {
-                if (typeof $(this).attr("href") !== "undefined") {
-                  if ($(this).attr("href").indexOf("http") === -1) {
-                    $(this).removeAttr("href");
-                  }
-                }
-              });
-            });
+          this.prettierList = marked(md || "", {
+            renderer: new marked.Renderer(),
+            gfm: true,
+            tables: true,
+            breaks: false,
+            pedantic: false,
+            sanitize: false,
+            smartLists: true,
+            smartypants: false,
+          });
+
+          $(".markdown-container a").each(function () {
+            if (typeof $(this).attr("href") !== "undefined") {
+              if ($(this).attr("href").indexOf("http") === -1) {
+                $(this).removeAttr("href");
+              }
+            }
+          });
           break;
       }
       setTimeout(() => {
