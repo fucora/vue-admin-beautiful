@@ -73,18 +73,20 @@ Modern browsers and Internet Explorer 11+.
 
 ```js
 module.exports = {
-  title: "BYUI-V2.2", //标题
-  abbreviation: "BYUI-2.2", //简写
+  title: "vue-admin-beautiful", //标题
+  abbreviation: "byui", //简写
   devPort: "80", //开发环境端口号
   version: "V2.2", //版本号
-  copyright: "chu1204505056", //必须保留版权,否则项目无法启动,吓唬你的哈哈哈
+  copyright: "初志鑫1204505056@qq.com", //必须保留版权
+  routesWhiteList: ["/login", "/404", "/401"],
   loadingText: "正在加载中...", //加载时显示文字
   tokenName: "accessToken", //token名称
   tokenTableName: "BYUI-VUE-TABLE", //token表名
   storage: "localStorage", //token存储位置
   logo: true, //是否显示logo
+  header: "noFixed", //固定fixed 不固定noFixed
   layout: "vertical", //横纵布局 horizontal vertical
-  layoutSwitchBar: true, //横纵切换工具是否开启
+  themeBar: true, //是否开启主题配置按钮
   tagsView: true, //是否显示多标签页
   colorWeakness: false, //色弱模式
   messageDuration: 2000, //消息框消失时间
@@ -93,10 +95,10 @@ module.exports = {
   invalidCode: 402, //登录失效code
   errorCode: 500, //系统异常code
   noPermissionCode: 401, //无权限code
-  errorLog: ["development"], //是否显示在页面高亮错误
+  errorLog: ["development", "staging", "production"], //是否显示在页面高亮错误
   shieldF12: false, //设置生产环境是否屏蔽f12等开发组工具快捷键
   loginInterception: true, //是否开启登录拦截
-  loginRSA: true, //是否开启登录RSA加密
+  loginRSA: false, //是否开启登录RSA加密
   httpRequestFile: false, //是否依据mock数据生成webstorm HTTP Request请求文件
   authentication: "intelligence", //intelligence和all两种方式，前者后端权限只控制roles不控制view文件的import（前后端配合，减轻后端工作量），all方式完全交给后端前端只负责加载
 };
@@ -104,36 +106,20 @@ module.exports = {
 
 ## variables.scss 配置
 
-- 说明：这里可以修改你项目的配色方案，默认提供了三种配色方案（黑色，蓝色，浅色）想要哪一种配色方案就把哪一种的变量放到最后即可。
+- 说明：这里可以修改你项目的配色方案。
 - 示例代码：
 
 ```scss
 @charset "utf-8";
+@charset "utf-8";
 /* byui scss全局变量开始 */
+$base-color-default: #009688;
 
-/*蓝色风格开始*/
-$base-menu-background: #2a58ad;
-$base-menu-active: #22468a;
-$base-menu-text: #ffffff;
-$base-menu-text-active: #ffffff;
-$base-title: #ffffff;
-/*蓝色风格结束*/
-
-/*浅色风格开始*/
-$base-menu-background: #e7eaed;
-$base-menu-active: #1890ff;
-$base-menu-text: #001529;
-$base-menu-text-active: #001529;
-$base-title: #001529;
-/*浅色风格结束*/
-
-/*黑色风格开始*/
 $base-menu-background: #001529;
-$base-menu-active: #1890ff;
+$base-menu-active-background: $base-color-default;
 $base-menu-text: #ffffff;
 $base-menu-text-active: #ffffff;
 $base-title: #ffffff;
-/*黑色风格结束*/
 
 $base-font-size-small: 12px;
 $base-font-size-default: 14px;
@@ -141,7 +127,8 @@ $base-font-size-big: 16px;
 $base-font-size-bigger: 18px;
 $base-font-size-max: 22px;
 $base-color-header: $base-menu-background;
-$base-color-default: #1890ff;
+$base-color-blue: $base-color-default;
+$base-color-green: #13ce66;
 $base-color-white: #ffffff;
 $base-color-black: #000000;
 $base-color-yellow: #ffba00;
@@ -157,15 +144,19 @@ $base-dialog-title-height: 40px;
 $base-padding: 15px;
 $base-box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
 $base-font-color: #606266;
-$base-left-menu-width: 225px;
-$base-right-content-width: calc(100% - 225px);
+$base-left-menu-width: 220px;
+$base-right-content-width: calc(100vw - 220px);
 $base-left-menu-width-min: 65px;
-$base-right-content-width-min: calc(100% - 65px);
+$base-right-content-width-min: calc(100vw - 65px);
 /* byui scss全局变量结束 */
 :export {
   menuText: $base-menu-text;
   menuTextAcive: $base-menu-text-active;
-  menuBg: $base-menu-background;
+  menuBackground: $base-menu-background;
+  menuActiveBackground: $base-menu-active-background;
+  tagViewsActiveBackground: $base-color-blue;
+  buttonBackground: $base-color-blue;
+  paginationActiveBackground: $base-color-blue;
 }
 ```
 
@@ -256,3 +247,7 @@ cnpm run template
 cnpm run template
 #选择创建vuex，填入名称会自动为您创建
 ```
+
+## 更多文档
+
+加群获取
