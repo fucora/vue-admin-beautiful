@@ -14,3 +14,4 @@ tests/**/coverage/
 *.sln
 public/video/
 vue-admin-beautiful.zip
+/vue-admin-beautiful.7z
