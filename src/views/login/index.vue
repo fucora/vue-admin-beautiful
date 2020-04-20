@@ -20,9 +20,9 @@
             prop="userName"
             class="login-form-admin"
           >
-            <span class="svg-container svg-container-admin"
-              ><byui-icon :icon="['fas', 'user']"
-            /></span>
+            <span class="svg-container svg-container-admin">
+              <byui-icon :icon="['fas', 'user']" />
+            </span>
             <el-input
               v-model="loginForm.userName"
               v-focus
@@ -205,6 +205,7 @@ export default {
       rgba(90, 97, 240, 1),
       rgba(106, 142, 239, 1)
     );
+    border: 0;
     box-shadow: 0 17px 21px 0 rgba(152, 173, 241, 0.44);
     margin-top: 5px;
 
