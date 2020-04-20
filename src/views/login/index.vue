@@ -181,7 +181,7 @@ export default {
 
 <style lang="scss" scoped>
 .login-container {
-  background: url("~@/assets/login_images/background.png") no-repeat;
+  background: url("~@/assets/login_images/background.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
   .title {
