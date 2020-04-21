@@ -23,17 +23,34 @@
             :icon="['fas', 'redo']"
             @click="refreshSelectedTag"
           />
-
-          <el-avatar :src="require('@/assets/user.gif')"></el-avatar>
           <el-tooltip effect="light" placement="bottom">
             <div slot="content">上次登录时间:{{ lastLoginTime }}</div>
-            <span class="user-name">{{ name }}</span>
+            <el-avatar :src="require('@/assets/user.gif')"></el-avatar>
           </el-tooltip>
-          <byui-icon
+
+          <el-dropdown>
+            <span class="el-dropdown-link">
+              <span class="user-name">{{ name }}</span>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item>群里人真是太难搞了</el-dropdown-item>
+              <el-dropdown-item>整天提乱七八糟的需求</el-dropdown-item>
+              <el-dropdown-item>
+                <byui-icon :icon="['fas', 'user']"></byui-icon>
+                个人中心
+              </el-dropdown-item>
+              <el-dropdown-item @click.native="logout">
+                <byui-icon :icon="['fas', 'sign-out-alt']"></byui-icon>
+                退出登录
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+
+          <!--  <byui-icon
             title="退出系统"
             :icon="['fas', 'sign-out-alt']"
             @click="logout"
-          />
+          />-->
         </div>
       </el-col>
     </el-row>
@@ -135,6 +152,7 @@ export default {
 
     .fold-unfold.el-icon-s-unfold {
     }
+
     ::v-deep {
       .breadcrumb-container {
         margin-left: 10px;
@@ -151,6 +169,8 @@ export default {
     .user-name {
       margin-right: 15px;
       margin-left: 5px;
+      cursor: pointer;
+      line-height: 40px;
     }
 
     ::v-deep {
@@ -178,5 +198,12 @@ export default {
       }
     }
   }
+}
+</style>
+<style>
+.el-dropdown-menu--small .el-dropdown-menu__item {
+  line-height: 36px !important;
+  padding: 0 15px;
+  font-size: 13px;
 }
 </style>
