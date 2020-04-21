@@ -1,8 +1,8 @@
 import Vue from "vue";
-import Router from "vue-router";
+import VueRouter from "vue-router";
 import Layout from "@/layouts";
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
 export const constantRoutes = [
   {
@@ -258,19 +258,13 @@ export const asyncRoutes = [
     hidden: true,
   },
 ];
-const createRouter = () =>
-  new Router({
-    mode: "hash",
-    scrollBehavior: () => ({
-      y: 0,
-    }),
-    routes: constantRoutes,
-  });
 
-const router = createRouter();
-const routerPush = Router.prototype.push;
-Router.prototype.push = function push(location) {
-  return routerPush.call(this, location).catch((error) => error);
-};
+const router = new VueRouter({
+  mode: "hash",
+  scrollBehavior: () => ({
+    y: 0,
+  }),
+  routes: constantRoutes,
+});
 
 export default router;
