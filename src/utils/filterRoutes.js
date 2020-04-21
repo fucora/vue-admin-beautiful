@@ -7,12 +7,13 @@ export function filterRoutes(constantRoutes) {
   return constantRoutes.filter((route) => {
     if (route.component) {
       if (route.component === "Layout") {
-        route.component = () => import("@/layouts");
+        route.component = () => (resolve) => require(["@/layouts"], resolve);
       } else if (route.component === "EmptyLayout") {
-        route.component = () => import("@/layouts/EmptyLayout");
+        route.component = (resolve) =>
+          require(["@/layouts/EmptyLayout"], resolve);
       } else {
         const path = "views/" + route.component;
-        route.component = () => import(`@/${path}`);
+        route.component = (resolve) => require([`@/${path}`], resolve);
       }
     }
     if (route.children && route.children.length) {
