@@ -167,7 +167,7 @@ export default {
     .mask {
       background: #000;
       opacity: 0.5;
-      width: 100vw;
+      width: 100%;
       top: 0;
       right: 0;
       bottom: 0;
@@ -203,12 +203,13 @@ export default {
 
         .nav-bar-container {
           position: relative;
-          padding-left: 5px;
+          box-sizing: border-box;
         }
 
         .tags-view-container {
-          padding-left: 8px;
-          padding-right: 8px;
+          padding-left: 5px;
+          padding-right: 5px;
+          box-sizing: border-box;
           box-shadow: $base-box-shadow;
         }
 
@@ -227,7 +228,7 @@ export default {
 
         ::v-deep {
           .fixed-header {
-            width: calc(100vw - 65px);
+            width: calc(100% - 65px);
             left: $base-left-menu-width-min;
           }
         }
