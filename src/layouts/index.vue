@@ -199,6 +199,7 @@ export default {
           transition: all 0.28s;
           left: $base-left-menu-width;
           width: $base-right-content-width;
+          box-shadow: $base-box-shadow;
         }
 
         .nav-bar-container {
@@ -210,7 +211,6 @@ export default {
           padding-left: 5px;
           padding-right: 5px;
           box-sizing: border-box;
-          box-shadow: $base-box-shadow;
         }
 
         .app-main-container {
