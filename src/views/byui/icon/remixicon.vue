@@ -1,7 +1,7 @@
 <template>
   <div class="colorful-icon-container">
     <el-divider content-position="left"
-      >图表太多暂未上传，如果需要联系群主自取，点击图标即可复制源码</el-divider
+      >图标太多暂未上传，如果需要联系群主自取，点击图标即可复制源码</el-divider
     >
     <el-row :gutter="15">
       <el-col :span="24">
