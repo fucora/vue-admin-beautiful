@@ -39,17 +39,19 @@ export default {
   computed: {
     ...mapGetters(["collapse", "routes"]),
     defaultOpen() {
-      const list = this.$store.getters.routes;
-      let arr = list.map((item) => {
+      if (this.collapse) {
+      }
+      let arr = this.routes.map((item) => {
         return path.resolve(item.path);
       });
       /*只默认展开除了首页,登录,404,重定向以外的第一级*/
       arr = this.$baseLodash.pull(
         arr,
         "/",
-        "/*",
+        "/!*",
         "/login",
         "/404",
+        "/401",
         "/redirect"
       );
       return arr;
