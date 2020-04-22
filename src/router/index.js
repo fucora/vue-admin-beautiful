@@ -102,7 +102,7 @@ export const asyncRoutes = [
         path: "icon",
         name: "Icon",
         component: (resolve) => require(["@/views/byui/icon/index"], resolve),
-        meta: { title: "图标" },
+        meta: { title: "常规图标" },
       },
       {
         path: "colorfulIcon",
@@ -110,6 +110,13 @@ export const asyncRoutes = [
         component: (resolve) =>
           require(["@/views/byui/icon/colorfulIcon"], resolve),
         meta: { title: "多彩图标" },
+      },
+      {
+        path: "remixicon",
+        name: "Remixicon",
+        component: (resolve) =>
+          require(["@/views/byui/icon/remixicon"], resolve),
+        meta: { title: "小清新图标" },
       },
       {
         path: "upload",
