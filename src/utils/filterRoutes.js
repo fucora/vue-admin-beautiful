@@ -7,7 +7,7 @@ export function filterRoutes(constantRoutes) {
   return constantRoutes.filter((route) => {
     if (route.component) {
       if (route.component === "Layout") {
-        route.component = () => (resolve) => require(["@/layouts"], resolve);
+        route.component = (resolve) => require(["@/layouts"], resolve);
       } else if (route.component === "EmptyLayout") {
         route.component = (resolve) =>
           require(["@/layouts/EmptyLayout"], resolve);
