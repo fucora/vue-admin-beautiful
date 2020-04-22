@@ -171,6 +171,7 @@ export default {
       margin-left: 5px;
       cursor: pointer;
       line-height: 40px;
+      font-weight: 600;
     }
 
     ::v-deep {
@@ -182,6 +183,7 @@ export default {
         margin-right: 15px;
         cursor: pointer;
         font-size: $base-font-size-big;
+        cursor: pointer;
       }
 
       button {

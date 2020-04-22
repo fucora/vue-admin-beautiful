@@ -85,6 +85,7 @@ export default {
     .el-scrollbar__wrap {
       overflow-x: hidden;
     }
+
     .el-menu {
       border: 0;
     }
@@ -112,6 +113,11 @@ export default {
       .el-menu-item {
         height: 46px !important;
         line-height: 46px !important;
+        background-color: $base-menu-children-background !important;
+
+        &:hover {
+          background-color: $base-menu-active-background !important;
+        }
 
         &.is-active {
           background-color: $base-menu-active-background !important;

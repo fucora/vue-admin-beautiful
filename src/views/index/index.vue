@@ -146,12 +146,6 @@
             </a>
             <a
               target="_blank"
-              href="https://chu1204505056.gitee.io/byui-bookmarks/guide/"
-            >
-              <el-button type="primary">文档</el-button>
-            </a>
-            <a
-              target="_blank"
               href="https://github.com/chuzhixin/vue-element-admin-beautiful"
             >
               <el-button type="primary">
@@ -163,6 +157,15 @@
                 >国内源码下载通道（记得给个好评）
               </el-button>
             </a>
+            <el-popover placement="top" width="250" trigger="hover">
+              <p>
+                加群获取，谢谢您愿意支持开源
+              </p>
+              <el-image :src="require('@/assets/ewm.png')"></el-image>
+              <a slot="reference" target="_blank">
+                <el-button type="warning">文档</el-button>
+              </a>
+            </el-popover>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
                 谢谢您愿意支持开源

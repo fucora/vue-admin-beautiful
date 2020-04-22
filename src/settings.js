@@ -16,7 +16,7 @@ module.exports = {
   tagsView: true, //是否显示多标签页
   colorWeakness: false, //色弱模式
   messageDuration: 2000, //消息框消失时间
-  requestTimeout: 5000, //最长请求时间
+  requestTimeout: 8000, //最长请求时间
   successCode: 200, //操作正常code
   invalidCode: 402, //登录失效code
   errorCode: 500, //系统异常code

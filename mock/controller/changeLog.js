@@ -49,6 +49,10 @@ const data = [
     content: "添加视频播放器组件",
     timestamp: "2020-04-20",
   },
+  {
+    content: "修复路由懒加载 完善主题配色",
+    timestamp: "2020-04-22",
+  },
 ];
 
 export default [
