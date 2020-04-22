@@ -26,7 +26,7 @@ const data = [
         path: "test",
         name: "Test",
         component: "test/index",
-        meta: { title: "Webstorm最新版激活", icon: "marker" },
+        meta: { title: "test", icon: "marker" },
       },
     ],
   },

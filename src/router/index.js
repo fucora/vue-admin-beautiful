@@ -52,7 +52,7 @@ export const asyncRoutes = [
         path: "test",
         name: "Test",
         component: (resolve) => require(["@/views/test/index"], resolve),
-        meta: { title: "Webstorm最新版激活", icon: "marker" },
+        meta: { title: "test", icon: "marker" },
       },
     ],
   },
@@ -84,13 +84,13 @@ export const asyncRoutes = [
           require(["@/views/byui/codeGenerator/index"], resolve),
         meta: { title: "代码生成机" },
       },
-
-      /*{
+      {
         path: "markdown",
         name: "Markdown",
-        component: (resolve) =>  require(["@/views/byui/markdown/index"),
+        component: (resolve) =>
+          require(["@/views/byui/markdown/index"], resolve),
         meta: { title: "markdown阅读器" },
-      },*/
+      },
       {
         path: "smallComponents",
         name: "SmallComponents",

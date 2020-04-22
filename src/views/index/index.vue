@@ -183,7 +183,7 @@
               <p>QQ:1204505056</p>
               <p>微信:chu1204505056</p>
               <a slot="reference" target="_blank">
-                <el-button type="warning">解锁全部功能</el-button>
+                <el-button type="warning">个性定制</el-button>
               </a>
             </el-popover>
           </div>
@@ -199,6 +199,7 @@
               v-for="(activity, index) in activities"
               :key="index"
               :timestamp="activity.timestamp"
+              :color="activity.color"
             >
               {{ activity.content }}
             </el-timeline-item>
@@ -210,7 +211,21 @@
           <div slot="header">
             <span>其他信息</span>
           </div>
-          <el-alert :closable="false" :title="userAgent" type="success">
+          <el-alert
+            :closable="false"
+            title="框架优势：mock数据自动导出无需配置；views，vuex，api支持自动生成；自动fixed问题代码，可以愉快的拥抱eslint"
+            type="success"
+          >
+          </el-alert>
+          <br />
+          <el-alert :closable="false" :title="userAgent" type="info">
+          </el-alert>
+          <br />
+          <el-alert
+            :closable="false"
+            title="在这里你能学到更多的知识，包括eslint自动的修复而不是手动--fix(千万不要去掉规范，规范是每个人必备的技能)，包括组件的快速搭建与入手，你的所有问题都会第一时间得到解答，你同时还可以获得一手的学习资料，不要去相信网上好几年前的教程，对技术没有任何的提升，这里有更多的注册码与激活工具，保证你的开发坏境实时保持最新，当然一切都是你的自愿原则，你来或者不来，我都会在那里，开源还是会继续，你还是可以享受到最新的开源代码, 你相信吗？未来要和你共度一生的那个人，其实在与你相同的时间里，也忍受着同样的孤独，那个人一定也怀着满心的期待，拥着一腔孤勇，穿过茫茫人海，也要来与你相见。"
+            type="warning"
+          >
           </el-alert>
         </el-card>
       </el-col>
@@ -546,6 +561,11 @@ export default {
     },
     fetchData() {
       getList().then((res) => {
+        res.data.map((item, index) => {
+          if (index === res.data.length - 1) {
+            item.color = "#0bbd87";
+          }
+        });
         this.activities = res.data;
       });
     },
