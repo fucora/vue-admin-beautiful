@@ -7,6 +7,7 @@ import "./support";
 import "@/styles/byui.scss";
 import byui from "@/utils/byui";
 import "@/icons";
+import "@/remixicon";
 import "@/permission";
 import "@/utils/errorLog";
 import "./f12";
