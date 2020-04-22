@@ -1,10 +1,18 @@
 <template>
-  <svg :class="svgClass" aria-hidden="true" v-on="$listeners">
+  <div
+    v-if="isExternal"
+    :style="styleExternalIcon"
+    class="svg-external-icon svg-icon"
+    v-on="$listeners"
+  />
+  <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
     <use :xlink:href="iconName" />
   </svg>
 </template>
 
 <script>
+import { isExternal } from "@/utils/validate";
+
 export default {
   name: "Remixicon",
   props: {
@@ -18,6 +26,9 @@ export default {
     },
   },
   computed: {
+    isExternal() {
+      return isExternal(this.iconClass);
+    },
     iconName() {
       return `#remixicon-${this.iconClass}`;
     },

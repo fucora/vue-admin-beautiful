@@ -1,8 +1,8 @@
 <template>
   <div class="colorful-icon-container">
     <el-divider content-position="left"
-      >图标太多暂未上传，如果需要联系群主自取，点击图标即可复制源码</el-divider
-    >
+      >图标太多暂未使用本地图标库使用的是cdn加速服务，如果需要换成本地加载方式请联系群主，点击图标即可复制源码
+    </el-divider>
     <el-row :gutter="15">
       <el-col :span="24">
         <el-form
@@ -44,7 +44,10 @@
           style="cursor: pointer;"
           @click.native="handleCopyIcon(index, $event)"
         >
-          <byui-remixicon :icon-class="item" @click.stop></byui-remixicon>
+          <byui-remixicon
+            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${item}.svg `"
+            @click.stop
+          ></byui-remixicon>
           <div class="icon-text">{{ item }}</div>
         </el-card>
       </el-col>
@@ -112,6 +115,7 @@ export default {
       });
     },
     handleCopyIcon(index, event) {
+      //const copyText = `<byui-remixicon icon-class="https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${this.queryIcon[index]}.svg" />`;
       const copyText = `<byui-remixicon icon-class="${this.queryIcon[index]}" />`;
       this.copyText = copyText;
       clip(copyText, event);
@@ -130,7 +134,8 @@ export default {
       position: relative;
       flex-direction: column;
 
-      svg:not(:root) {
+      svg:not(:root),
+      .svg-external-icon {
         cursor: pointer;
         color: $base-color-blue;
         vertical-align: middle;
