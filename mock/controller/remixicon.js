@@ -1550,8 +1550,6 @@ const data = [
   "refund-line",
   "registered-fill",
   "registered-line",
-  "fill",
-  "line",
   "remote-control-2-fill",
   "remote-control-2-line",
   "remote-control-fill",
