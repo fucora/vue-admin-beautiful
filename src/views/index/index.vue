@@ -180,9 +180,12 @@
                 谢谢您愿意支持开源 群主每周在线授课 每天在线答疑
                 你会得到意想不到的收获
               </p>
+              <p>第一步微信支付联系群主qq1204505056获取秘钥</p>
+              <el-image :src="require('@/assets/ewm_wx.png')"></el-image>
+              <p>第二步愉快的加群讨论学习</p>
               <el-image :src="require('@/assets/ewm_vip.png')"></el-image>
               <a slot="reference" target="_blank">
-                <el-button type="warning">VIP讨论群 805808910</el-button>
+                <el-button type="warning">VIP授课群 氪金用户进</el-button>
               </a>
             </el-popover>
           </div>
