@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-alert
-      title="致攻击我网站的人：攻击我的演示网站一定让您很有成就感吧，谢谢你让我更认真的去拥抱技术。。。"
+      title="欢迎加入vue-admin-beautifulQQ群：972435319"
       type="success"
       :closable="false"
     >
@@ -184,6 +184,7 @@ export default {
   background: url("~@/assets/login_images/background.jpg") no-repeat;
   background-size: cover;
   height: 100vh;
+
   .title {
     height: 50px;
     font-size: 54px;
