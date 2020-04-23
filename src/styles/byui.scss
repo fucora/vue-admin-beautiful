@@ -4,30 +4,6 @@
 
 $base: ".byui";
 
-::-webkit-scrollbar {
-  width: 13px;
-}
-
-::-webkit-scrollbar-thumb {
-  border: 3px solid transparent;
-  background-clip: padding-box;
-  border-radius: 7px;
-  min-height: 84px;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(248, 250, 252, 0);
-}
-
-::-webkit-scrollbar-track:hover {
-  background-color: #f8fafc;
-}
-
 @mixin scrollbar {
   overflow-y: auto;
   max-height: 98vh;
@@ -75,6 +51,30 @@ a {
 
 html {
   body {
+    &::-webkit-scrollbar {
+      width: 13px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 3px solid transparent;
+      background-clip: padding-box;
+      border-radius: 7px;
+      min-height: 84px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(248, 250, 252, 0);
+    }
+
+    &::-webkit-scrollbar-track:hover {
+      background-color: #f8fafc;
+    }
+
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;

@@ -177,13 +177,12 @@
             </el-popover>
             <el-popover placement="top" width="250" trigger="hover">
               <p>
-                添加好友时请附带，付款人名称信息，我一定努力让你觉得物超所值，当然一切都是在你自愿的基础上
+                谢谢您愿意支持开源 群主每周在线授课 每天在线答疑
+                你会得到意想不到的收获
               </p>
-              <el-image :src="require('@/assets/wx_ewm.png')"></el-image>
-              <p>QQ:1204505056</p>
-              <p>微信:chu1204505056</p>
+              <el-image :src="require('@/assets/ewm_vip.png')"></el-image>
               <a slot="reference" target="_blank">
-                <el-button type="warning">个性定制</el-button>
+                <el-button type="warning">VIP讨论群 805808910</el-button>
               </a>
             </el-popover>
           </div>

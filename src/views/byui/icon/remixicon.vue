@@ -45,7 +45,8 @@
           @click.native="handleCopyIcon(index, $event)"
         >
           <byui-remixicon
-            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${item}.svg `"
+            v-show="item"
+            :icon-class="`https://cdn.jsdelivr.net/gh/chuzhixin/zx-remixicon@master/src/icons/svg/${item}.svg`"
             @click.stop
           ></byui-remixicon>
           <div class="icon-text">{{ item }}</div>
@@ -105,8 +106,9 @@ export default {
     },
     fetchData() {
       getIconList().then((res) => {
-        this.queryIcon = res.data;
-        this.allIcon = res.data;
+        const data = res.data;
+        this.queryIcon = data;
+        this.allIcon = data;
         this.tips = `共检索到${this.allIcon.length}个图标`;
         this.$baseMessage(
           "累计更新" + this.allIcon.length + "个图标",
