@@ -16,18 +16,19 @@
 
 演示地址:[vue-admin-beautiful](http://chu1204505056.gitee.io/vue-admin-beautiful)
 
-## 致歉
+## vue-admin-beautiful 前端讨论群-1 972435319
 
-最近演示网站总被不知名人士攻击恶意劫持到其他网站，在此向大家致歉，烦请攻击的大哥放过。。。
+不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
+
+## vue-admin-beautiful 前端讨论群-VIP 805808910
+
+群内问题优先回答 群主每周在线授课 提供脚手架搭建在线指导 组件封装方法指导 NPM 发包开发组件指导
+![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm_vip.png)
 
 ## 梦想
 
 你相信吗?未来要和你共度一生的那个人，其实在与你相同的时间里，也忍受着同样的孤独，那个人一定也怀着满心的期待，拥着一腔孤勇，穿过茫茫人海，也要来与你相见，愿世间美好与你环环相扣...
-
-## 官方问题解答知识分享群 972435319
-
-不管您加或者不加 您都可以享受到开源的代码 感谢您的支持 群里的任何问题我都会一一解答 感谢您的信任
-![image](https://chu1204505056.gitee.io/byui-bookmarks/img/ewm.png)
 
 ## 鸣谢 花裤衩的开源项目给了我不少灵感（tagsview 在花大佬的基础上改造）
 
@@ -38,6 +39,10 @@
 ## 捐赠
 
 ![image](https://chu1204505056.gitee.io/byui-bookmarks/img/donation.png)
+
+## 致歉
+
+最近演示网站总被不知名人士攻击恶意劫持到其他网站，在此向大家致歉，烦请攻击的大哥放过。。。
 
 ## 目录结构
 
